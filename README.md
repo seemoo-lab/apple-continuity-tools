@@ -51,7 +51,7 @@ We provide a brief overview of the included tools. Please read the respective `R
 
 ## Related Publications
 
-- Milan Stute, Alexander Heinrich, Jannik Lorenz, and Matthias Hollick. **Disrupting Continuity of Apple’s Wireless Ecosystem Security: New Tracking, DoS, and MitM Attacks on iOS and macOS Through Bluetooth Low Energy, AWDL, and Wi-Fi.** _30th USENIX Security Symposium (USENIX Security ’21)_, August 11–13, 2021, Vancouver, B.C., Canada. _To appear_.
+- Milan Stute, Alexander Heinrich, Jannik Lorenz, and Matthias Hollick. **Disrupting Continuity of Apple’s Wireless Ecosystem Security: New Tracking, DoS, and MitM Attacks on iOS and macOS Through Bluetooth Low Energy, AWDL, and Wi-Fi.** _30th USENIX Security Symposium (USENIX Security ’21)_, August 11–13, 2021, Vancouver, B.C., Canada. [Link](https://www.usenix.org/conference/usenixsecurity21/presentation/stute)
 - Milan Stute. **Availability by Design: Practical Denial-of-Service-Resilient Distributed Wireless Networks.** Dissertation, _Technical University of Darmstadt_, February 14, 2020. [doi:10.25534/tuprints-00011457](https://doi.org/10.25534/tuprints-00011457)
 - Milan Stute, Sashank Narain, Alex Mariotto, Alexander Heinrich, David Kreitschmann, Guevara Noubir, and Matthias Hollick. **A Billion Open Interfaces for Eve and Mallory: MitM, DoS, and Tracking Attacks on iOS and macOS Through Apple Wireless Direct Link.** _28th USENIX Security Symposium (USENIX Security ’19)_, August 14–16, 2019, Santa Clara, CA, USA. [Link](https://www.usenix.org/conference/usenixsecurity19/presentation/stute)
 
