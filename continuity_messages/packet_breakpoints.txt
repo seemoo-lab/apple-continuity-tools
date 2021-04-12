@@ -1,0 +1,18 @@
+attach -n "rapportd"
+#
+# Receiving 
+break s -n _receivedHeader:encryptedObjectData:ctx: -C bt -C "po \"Received encrypted Object\"" -C "po $arg3" -C "po $arg4" -C "po $arg5" --auto-continue 1
+br disable 1
+break s -n _receivedObject:ctx: -C bt -C "po \"---------- Received object --------\"" -C "po $arg1" -C "po $arg3" -C "po $arg4" --auto-continue 1
+#
+#Sending
+br s -n _sendEncryptedResponse:error:xid:requestID: -C bt -C "po \"----- Sending object ------\"" -C "po $arg1" -C "po $arg3" -C "po $arg4" -C "po $arg5" -C "po $arg6" --auto-continue 1
+br s -n sendEncryptedEventID:data:xid:options:completion: -C bt -C "po \"------ Sending object ------\"" -C "po $arg1" -C "po $arg3" -C "po $arg4" -C "po $arg5" -C "po $arg6" --auto-continue 1
+br s -n _sendEncryptedEventID:data:xid:options:completion: -C bt -C "po \"---------- Sending object --------\"" -C "po $arg1" -C "po $arg3" -C "po $arg4" --auto-continue 1
+br s -n _sendEncryptedRequestID:request:xpcID:options:sendEntry:responseHandler: -C bt -C "po \"---------- Sending object --------\"" -C "po $arg1" -C "po $arg3" -C "po $arg4" --auto-continue 1
+
+# Bonjour 
+br s -n  "-[RPIdentity verifyAuthTagPtr:authTagLen:dataPtr:dataLen:type:error:]" -C "po \"---------- Verify rpl ad --------\"" -C "po $arg1" -C "po $arg3" -C "po $arg4" -C "po $arg5" -C "po $arg6" --auto-continue 1
+br s -n  "-[RPIdentityDaemon resolveIdentityForBonjourDevice:typeFlags:]" -C "po \"---------- Verify read --------\"" -C "po $arg1" -C "po $arg3" -C "po $arg4 --auto-continue 1
+
+c
